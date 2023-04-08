@@ -14,3 +14,6 @@ b) Also, a **station analysis** was conducted by querying the data set to calcul
 
 ## Part 2: Designing a 'Climate App'
 
+To launch the Flask app, run the 'python app.py'. The user will be able to follow the URL to the local host, where a json can be returned for a station-route that returns jsonified data of all of the stations in the database, a tobs-route that returns jsonified data for the most active station (USC00519281) and only returns the jsonified data for the last year of data, and lastly, an API Dynamic-route.
+
+
