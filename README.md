@@ -1,4 +1,4 @@
-# SQLAlchemy 
+# SQLAlchemy Module 10 Challenge
 
 # Part 1: Analyzing and Explore the Climate Data
 
@@ -11,3 +11,6 @@ a) A **precipitation analysis** was conducted by finding the most recent date in
 b) Also, a **station analysis** was conducted by querying the data set to calculate the total number of stations, finding the most-active stations. Station 'USC00519281' has the greatest number of observations at 2,772. Next, a query was designed to calculate the lowest, highest, and average temperatures that filters on the most-active station id found in the previous query. Those temperatures were 54.0 ºF, 71.7 ºF, and 85 ºF, respectively. A query was designed to get the temperature observation data, or "TOBS", by filtering by the station that has the greatest number of observations, and querying the previous 12 months of TOBS data for that station. A histogram of this data with bins=12 was generated as show below.
 
 ![alt text](https://raw.githubusercontent.com/adampaganini/SQLAlchemy_challenge/main/images/hist.png)
+
+## Part 2: Designing a 'Climate App'
+
