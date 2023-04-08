@@ -33,7 +33,17 @@ def welcome():
     ''')
 
 @app.route("/api/v1.0/precipitation")
-
+def precip():
+    one_year = dt.date(2017, 8, 23)-dt.timedelta(days = 365)
+    oy_precip = session.query(measurements.date, measurements.prcp).filter(measurements.date>=one_year).all()
+    session.close()
+    precip = []
+    for date, prcp in oy_precip:
+        pcp_dict = {}
+        pcp_dict["Date"]=date
+        pcp_dict["Precipitation (in)"]=prcp
+        precip.append(pcp_dict)
+    return jsonify(precip)
 
 @app.route("/api/v1.0/stations")
 def stations():
@@ -42,8 +52,13 @@ def stations():
     stations=list(np.ravel(results))
     return jsonify(stations)
 
-#@app.route("/api/v1.0/tobs") 
-
+@app.route("/api/v1.0/tobs") 
+def tobs():
+    one_year = dt.date(2017, 8, 23)-dt.timedelta(days = 365)
+    results = session.query(measurements.tobs).filter(measurements.station=="USC00519281").filter(measurements.date>=one_year).all()
+    session.close()
+    temp_obs=list(np.ravel(results))
+    return jsonify(temp_obs)
 
 @app.route("/api/v1.0/temp/<start>")
 @app.route("/api/v1.0/temp/<start>/<end>")
