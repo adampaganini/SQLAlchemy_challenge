@@ -1,6 +1,6 @@
 # SQLAlchemy Module 10 Challenge
 
-# Part 1: Analyzing and Explore the Climate Data
+## Part 1: Analyzing and Explore the Climate Data
 
 In this section, Python and SQLAlchemy was used to do a basic climate analysis and data exploration of a climate database. Specifically, SQLAlchemy ORM queries, Pandas, and Matplotlib were used to complete the analysis in the [climate_starter.ipynb](https://github.com/adampaganini/SQLAlchemy_challenge/blob/main/climate_starter.ipynb) file. SQLAlchemy was used to create an engine function to connect to the SQLite database called [hawaii.sqlite](https://github.com/adampaganini/SQLAlchemy_challenge/blob/main/Resources/hawaii.sqlite). The two following analyses were conducted:
 
